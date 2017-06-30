@@ -1,0 +1,657 @@
+@import "nib"
+@import "normalize.styl"
+@import "icons.styl"
+
+
+
+verde = #92BF4F
+verde2 = #3e6520
+turquesa = #68C8CE
+azul = #0A3681
+celeste = #25a1e7
+fusia = #FF3EAA
+gris = #777777
+gris2 = #a1a0a0
+naranja = #FD6100
+
+*
+	box-sizing border-box
+*
+	&:after
+	&:before
+		box-sizing border-box
+
+
+body
+	font-family 'Lato', serif
+	font-size 100%
+	line-height 30px
+	background #FFF
+	color #000//gris2
+
+ul
+	margin 0
+	padding 0
+	
+
+a
+	text-decoration none
+	transition all .5s ease
+	
+
+h1
+h2
+h3
+h4
+h5
+	margin-top 0
+	font-weight 700
+h1
+	line-height 45px
+
+img
+	max-width 100%
+	height auto
+input[type="text"]
+input[type="email"]
+input[type="number"]
+select
+textarea
+	width 100%
+	height 32px
+textarea
+	height 90px
+.select2-container--default .select2-selection--single
+.select2-container--default .select2-selection--multiple
+	border-radius 0 !important
+	min-height 36px !important
+.select2-container
+	width 100% !important
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+	margin-top 1px !important
+	background-color verde2 !important
+	color white
+.right
+	right 0
+.left
+	left 0
+.txt-center
+	text-align center
+
+.hidden
+	display none 
+.no-padding
+	padding-left 0 !important
+	padding-right 0 !important
+
+	
+.btn
+.wpcf7-submit
+	padding .5rem .8rem
+	border-radius 6px
+	display inline-block
+	color white
+	transition all .5s ease
+	border 1px solid verde
+	box-shadow 0 1px 1px verde
+	background-color verde
+	
+	&:hover
+		background-color white
+		border-color #d6d6d6
+		box-shadow 0 1px 1px gris
+		color verde2
+
+.wpcf7-submit
+	border none
+	background-color verde
+	&:hover
+		background-color verde2
+		color white
+.inner
+	max-width 1150px
+	margin 0 auto
+	position relative
+	padding-left 2rem
+	padding-right 2rem
+
+.header
+	position: relative;
+	background-color: #FFF;
+	padding: 0.5rem;
+	height: 100px;
+	width: 100%;
+	border-bottom: 1px solid #d9d9d9;
+	border-color: rgba(0,0,0,0.09);
+	z-index: 999;
+	&-logo 
+		display inline-block
+		width 100px
+	&-menu 
+		display: none;
+		position: absolute;
+		top: 81px;
+		left: 0;
+		right: 0;
+		background-color: verde;
+		text-align center
+		li 
+			display block
+		a 
+			display block
+			color white
+			padding 1rem 
+	&-btn-menu
+		position absolute
+		right 1rem
+		background-color transparent
+		border none 
+		color verde
+		font-size 2rem
+		top 20px
+		outline none
+	
+	
+@media screen and (min-width: 1024px)
+	.header
+		position: absolute;
+		background-color: white;
+		height: 90px;
+		bottom: -90px;
+		transition: all 0.3s ease;
+		padding-left: 0;
+		padding-right: 0;
+		&-btn-menu
+			display none
+		&-menu
+			display: block !important;
+			float: right;
+			position: static;
+			line-height: 80px;
+			background-color white
+			text-align left
+			ul 
+				display flex
+				flex-wrap wrap 
+				justify-content space-between
+			li 
+				position relative
+			a 
+				display block
+				padding 0 1rem
+				color #3e6520
+				&:hover 
+					color verde
+		&--fixed
+			//background-color #000
+			height 80px
+			position fixed
+			top 0
+			.header-container
+				background-color transparent
+			.header-logo
+				width 90px//70px
+				opacity 1
+				margin-top 5px
+			.header-menu
+				border-top none
+				line-height: 71px;
+				&-link
+					padding-top 1rem
+					color white
+					line-height 30px
+					//font-size 1rem 
+
+.banner
+	width 100%
+	height 30vh
+	position relative
+	
+	&.banner-page
+		height 250px//400px;
+		.item
+			height 250px//400px;
+			&-info
+				top 70%
+	
+	/*.inner
+		position relative*/
+	.item 
+		background-size cover
+		background-repeat no-repeat
+		background-position top center
+		height 30vh
+		//position relative
+		&-info
+			position absolute
+			padding 1rem
+			color white
+			top 35%
+			transform translate(0, -50%)
+			font-size 12px
+			background-color rgba(0,0,0,.75)
+			text-align center
+			display none
+			h2
+				font-size 1rem
+				margin 24px 0
+				font-weight bold
+				text-transform uppercase
+				line-height 1em
+				position relative
+				&:after
+					display block
+					content ''
+					width 50%
+					height 4px 
+					background-color verde
+					position absolute
+					bottom -20px
+					left 50%
+					transform translate(-50%, 0)
+				
+				
+			p
+				font-size 1rem
+
+				
+						
+			
+	img 
+		display block
+		width 100%
+	.owl-dots
+		display none
+		text-align center
+		position absolute
+		left 0
+		right 0
+		bottom 95px
+		z-index 901
+		.owl-dot
+			display inline-block
+			&.active
+				span
+					background-color white
+			span
+				width 10px
+				height 10px
+				margin 5px 7px
+				background transparent
+				border 2px solid white
+				display block
+				border-radius: 30px
+	
+		
+	.owl-prev
+	.owl-next
+		display none
+		position absolute
+		top 50%
+		transform translate(0, -50%)
+		font-family: 'av' !important;
+		color white
+		font-size 3rem
+		z-index	902
+			
+	.owl-prev
+		left 1rem
+		&:before
+			content: "\f104";
+			opacity 1
+	.owl-next
+		right 1rem
+		&:before
+			content: "\f105";
+			opacity 1
+	&-link
+		position absolute
+		bottom 1rem
+		left 0
+		right 0
+		z-index 100
+		text-align center
+		a 
+			background-color transparent
+			font-size 2rem
+			
+		
+@media screen and (min-width: 768px)
+	.banner
+		height 100vh
+		.item 
+			height 100vh
+			&-info
+				display block
+				top 45%
+				left 50%
+				padding-top 0
+				padding-left 0
+				width 70%
+				transform translate(-50%, -50%)
+				//font-size 32px
+				text-align center
+				padding 1rem
+				h2
+					font-size 2.5em
+					margin 32px 0
+					
+				p
+					font-size 1.3rem
+		&.banner-page
+			height 400px;
+			.item
+				height 400px;
+				&-info
+					top 70%
+					left auto
+					max-width 600px
+		.owl-dots			
+		.owl-prev
+		.owl-next
+			display block
+	
+.services
+	padding-top 2rem
+	padding-bottom 2rem
+	background-color #000
+	h2
+		text-align center
+		color white
+	&-container
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+	&-item
+		width 100%
+		background-size cover
+		background-repeat no-repeat
+		background-position center center
+		text-align center
+		height 350px
+		border-radius 15px
+		position relative
+		margin-bottom 1rem
+		&-info
+			background-color rgba(0,0,0,.75)
+			color white
+			margin-top 4rem
+			//font-size 14px
+			h3
+				margin-bottom 0
+			p 
+				margin-top 0
+		&-link 
+			position absolute
+			left 0
+			right 0
+			top 0
+			bottom 0
+		
+@media screen and (min-width: 768px)
+	.services
+		padding-top 10rem
+		padding-bottom 6rem
+		&-item
+			width 30%
+.call
+	padding-top 4rem
+	padding-bottom 4rem
+	background-color #000
+	background-image url('./img/rana.jpg');
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+	background-attachment fixed
+	&-container
+		text-align center
+		color white
+	&-info
+		background-color rgba(0,0,0,.75)
+		border-radius 10px
+		padding 1rem
+		max-width 780px
+		display inline-block
+		h2
+			position relative
+			&:after
+				display block
+				content ''
+				width 40%
+				height 4px 
+				background-color verde
+				position absolute
+				bottom -10px
+				left 50%
+				transform translate(-50%, 0)
+@media screen and (min-width: 768px)
+	.call
+		padding-top 10rem
+		padding-bottom 10rem
+		
+.call2
+	padding-top 2rem
+	padding-bottom 2rem
+	ul 
+		margin-left 45px;
+	&-container
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+	
+	&-column
+		width 100%
+		margin-bottom 1rem
+		
+@media screen and (min-width: 768px)
+	.call2
+		&-column
+			width 48%
+			
+.footer
+	padding-top 1rem
+	padding-bottom 1rem
+	background-color #EAEAEA
+	text-align center
+	&-social 
+		a 
+			display inline-block
+			vertical-align top 
+			color gris
+			font-size 2.5rem
+			padding .5rem 1rem
+	.copy
+		position static
+		right 1rem 
+		top 15px
+@media screen and (min-width: 768px)
+	.footer
+		.copy
+			position absolute
+			
+.main 
+	padding-top 2rem
+	padding-bottom 2rem
+//@media screen and (min-width: 1024px)			
+	
+
+.tour-banner
+	background-size cover
+	background-position 50% 50%
+	position absolute
+	top 0
+	left 0
+	bottom 0
+	right 0
+	height 350px
+	min-height 0
+	max-height initial
+	
+// .woocommerce div.product
+// 	overflow hidden
+// 	.video 
+// 		margin-top .5rem
+// 		width 100%
+// 		height 350px
+// 		iframe
+// 			width 100%
+
+.product-description-accordion-button
+	background-color #e7e7e7
+	border-color #b9b9b9
+	color #333
+	display block
+	padding .5rem
+	cursor pointer
+	text-align center
+	margin-bottom 0
+	text-transform uppercase
+	font-size 1rem
+	&:hover
+		background-color #b9b9b9
+		color white
+		
+.product-description-accordion-content
+	background-color #e3e3e3
+	padding 1rem
+.woocommerce div.product div.images
+	margin-bottom 0
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper
+	background-size contain;
+	background-position bottom center;
+	position relative
+	top 0
+	left 0
+	bottom 0
+	right 0
+	min-height 0
+	max-height initial
+
+@media screen and (min-width:1000px)
+	.tour-banner
+		height 100vh//400px
+	.woocommerce div.product div.images .woocommerce-product-gallery__wrapper
+		background-size cover;
+		background-position 50% 50%
+		height 100vh//400px
+
+.woocommerce ul.products li.product a img
+	margin-bottom 0
+.woocommerce-loop-product__title
+	color white
+	margin-bottom 0
+	text-align center
+	background-color azul
+
+.woocommerce-breadcrumb
+	display none
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images
+	float none
+	width 100%
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary
+	float none
+	width 100%
+
+.product-short-description
+.product-description
+	display inline-block
+	vertical-align top
+	width 100%
+
+.entry-summary
+	overflow hidden
+
+@media screen and (min-width:1000px)
+	.product-short-description
+		width 60%
+		float left
+		padding-left 2rem
+	.product-description
+		width 33%
+		float right
+		padding-right 2rem
+
+.product-header
+	position relative
+.product_meta
+	display none
+		
+.woocommerce div.product .product_title
+	position absolute
+	display block
+	bottom 13rem
+	z-index 2
+	background-color rgba(0,0,0,.75)
+	padding 1.5rem
+	color white
+	//border-radius 10px
+
+.btn-product-readmore
+	position absolute
+	bottom 8rem
+	background-color verde
+	z-index 2
+	font-size 2.5rem
+
+.woocommerce div.product p.price, .woocommerce div.product span.price
+	font-size 2.8rem
+	padding .5rem
+	color verde
+	margin 0
+.product-buttons
+	//background-color #e3e3e3
+	border-bottom 1px solid #e3e3e3
+	width 100%
+	color verde
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	padding .5rem 1rem
+
+.masonry-gallery
+	clear: both;	
+.woocommerce-product-gallery__image
+	padding .5rem
+	width 350px
+	
+.grid-item--width2
+	width: 600px;
+
+.tours
+	margin-top 70px
+	overflow hidden
+	background-color verde
+	&-items 
+		display flex
+		flex-wrap wrap 
+		justify-content space-between
+		.tours-item
+			width 33.33%
+			box-shadow 1px 1px 2px rgba(0,0,0,.35)
+			img 
+				display block
+				height 240px
+			h4
+				color white
+				margin-bottom 0
+				text-align center
+				background-color verde
+				a 
+					color white
+			a 
+				color white
+			.entry-excerpt
+				background-color verde2
+				color white
+				&-wrapper
+					padding .5rem
+					display flex
+					flex-wrap wrap
+					justify-content space-between
+			&:hover
+				h4
+					background-color verde
+		
+			
