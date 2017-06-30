@@ -1240,7 +1240,7 @@ textarea {
   color: #fff;
   margin-bottom: 0;
   text-align: center;
-  background-color: #0a3681;
+  background-color: #3e6520;
 }
 .woocommerce-breadcrumb {
   display: none;
@@ -1369,19 +1369,22 @@ textarea {
   justify-content: space-between;
 }
 .tours-items .tours-item {
-  width: 33.33%;
+  width: 33%;
   -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
   box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
+  margin-bottom: 0.5rem;
 }
 .tours-items .tours-item img {
   display: block;
   height: 240px;
+  width: 100%;
 }
 .tours-items .tours-item h4 {
   color: #fff;
   margin-bottom: 0;
   text-align: center;
   background-color: #92bf4f;
+  font-size: 13px;
 }
 .tours-items .tours-item h4 a {
   color: #fff;
