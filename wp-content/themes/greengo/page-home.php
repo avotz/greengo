@@ -68,21 +68,21 @@ get_header(); ?>
 		  	  			<h3>Activities</h3>
 		  	  			<p>The most popular tours in our list!</p>
 		  	  		</div>
-		  	  		<a href="#" class="services-item-link"></a>
+		  	  		<a href="<?php echo esc_url( home_url( '/activities' ) ); ?>" class="services-item-link"></a>
 		  	  	</div>
 		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/air-transportation.jpg');">
 		  	  		<div class="services-item-info">
 		  	  			<h3>Air Transportation</h3>
 		  	  			<p>Local and worldwide flights</p>
 		  	  		</div>
-		  	  		<a href="#" class="services-item-link"></a>
+		  	  		<a href="<?php echo esc_url( home_url( '/air-transportation' ) ); ?>" class="services-item-link"></a>
 		  	  	</div>
 		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/accommodations.jpg');">
 		  	  		<div class="services-item-info">
 		  	  			<h3>Luxury Accommodations</h3>
 		  	  			<p>Lorem ipsum dolor sit amet, consectetur  </p>
 		  	  		</div>
-		  	  		<a href="#" class="services-item-link"></a>
+		  	  		<a href="<?php echo esc_url( home_url( '/luxury-accommodation' ) ); ?>" class="services-item-link"></a>
 		  	  	</div>
 		  	  </div>
 		</div>
