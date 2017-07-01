@@ -23,7 +23,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>Our goal is to be recognized as the company that provides the best tours and travel memories and that we support it with a deep passion of personalized service</p>
+		  	  			<p>a signature of excellence!</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -32,8 +32,8 @@ get_header(); ?>
 	  	  	
 		  	  		
 		  	  		<div class="item-info">
-		  	  			<h2>Excellence! We aim for perfection every single time. </h2>
-		  	  			<p>We have a unified team that consistently gives outstanding costumer service within every email, tour, interaction with our customers, and business associates and colleagues</p>
+		  	  			
+		  	  			<p>Let us take you to places most  people don’t even know exist.</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -42,8 +42,38 @@ get_header(); ?>
 	  	  	
 		  	  		
 		  	  		<div class="item-info">
-		  	  			<h2>Our greatest asset and the key to our success is our people</h2>
-		  	  			<p>Each of us has a sense of pride, dignity, and satisfaction in what we do.</p>
+		  	  			
+		  	  			<p>Let us transform your trip into a immensely pleasurable experience.</p>
+		  	  		</div>
+		  	  		
+		  	  
+	  	  </div>
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner4.jpg');">
+	  	  	
+		  	  		
+		  	  		<div class="item-info">
+		  	  			
+		  	  			<p>Limitless bespoke services tailored to the most discerning clientele.</p>
+		  	  		</div>
+		  	  		
+		  	  
+	  	  </div>
+	  	   <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner5.jpg');">
+	  	  	
+		  	  		
+		  	  		<div class="item-info">
+		  	  			
+		  	  			<p>Tailored concierge services experiences to fit your specific needs and lifestyle.</p>
+		  	  		</div>
+		  	  		
+		  	  
+	  	  </div>
+	  	   <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner6.jpg');">
+	  	  	
+		  	  		
+		  	  		<div class="item-info">
+		  	  			
+		  	  			<p>Transform the impossible into a breath-taking once in a lifetime memories.</p>
 		  	  		</div>
 		  	  		
 		  	  
