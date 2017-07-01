@@ -32,7 +32,7 @@ get_header(); ?>
 	  	  	
 		  	  		
 		  	  		<div class="item-info">
-		  	  			
+		  	  			<h2>Green Go Costa Rica</h2>
 		  	  			<p>Let us take you to places most  people don’t even know exist.</p>
 		  	  		</div>
 		  	  		
@@ -42,7 +42,7 @@ get_header(); ?>
 	  	  	
 		  	  		
 		  	  		<div class="item-info">
-		  	  			
+		  	  			<h2>Green Go Costa Rica</h2>
 		  	  			<p>Let us transform your trip into a immensely pleasurable experience.</p>
 		  	  		</div>
 		  	  		
@@ -52,7 +52,7 @@ get_header(); ?>
 	  	  	
 		  	  		
 		  	  		<div class="item-info">
-		  	  			
+		  	  			<h2>Green Go Costa Rica</h2>
 		  	  			<p>Limitless bespoke services tailored to the most discerning clientele.</p>
 		  	  		</div>
 		  	  		
@@ -62,7 +62,7 @@ get_header(); ?>
 	  	  	
 		  	  		
 		  	  		<div class="item-info">
-		  	  			
+		  	  			<h2>Green Go Costa Rica</h2>
 		  	  			<p>Tailored concierge services experiences to fit your specific needs and lifestyle.</p>
 		  	  		</div>
 		  	  		
@@ -72,7 +72,7 @@ get_header(); ?>
 	  	  	
 		  	  		
 		  	  		<div class="item-info">
-		  	  			
+		  	  			<h2>Green Go Costa Rica</h2>
 		  	  			<p>Transform the impossible into a breath-taking once in a lifetime memories.</p>
 		  	  		</div>
 		  	  		
