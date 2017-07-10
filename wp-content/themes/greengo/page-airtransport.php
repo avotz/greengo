@@ -72,7 +72,7 @@ get_header(); ?>
 								  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
 								  	 	?>
 								    	
-										<div class="transportation-item-img" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo $thumb_url[0] ?>');">
+										<div class="transportation-item-img" style="background-image: url('<?php echo $thumb_url[0] ?>');">
 								  	  		
 								  	  	</div>
 										
@@ -120,7 +120,7 @@ get_header(); ?>
 								  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
 								  	 	?>
 								    	
-										<div class="transportation-item-img" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo $thumb_url[0] ?>');">
+										<div class="transportation-item-img" style="background-image: url('<?php echo $thumb_url[0] ?>');">
 								  	  		
 								  	  	</div>
 										

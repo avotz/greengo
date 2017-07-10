@@ -57,11 +57,13 @@ input[type="text"]
 input[type="email"]
 input[type="number"]
 input[type="tel"]
-input[type="search"]	
+input[type="search"]
+input[type="date"]	
 select
 textarea
 	width 100%
 	height 32px
+	background-color white !important
 textarea
 	height 90px
 .select2-container--default .select2-selection--single
@@ -75,6 +77,11 @@ textarea
 	margin-top 1px !important
 	background-color verde2 !important
 	color white
+	
+.wpcf7-form-control-wrap.date.flatpickr-input.flatpickr-mobile
+.wpcf7-form-control-wrap.time.flatpickr-input.flatpickr-mobile
+	display none
+	
 .right
 	right 0
 .left
@@ -176,9 +183,7 @@ textarea
 			padding 1rem
 			text-transform uppercase
 			//font-weight 700
-			&:hover 
-				color verde
-				border-bottom 2px solid verde
+			
 		.sub-menu
 			//width 250px
 			text-align center
@@ -242,6 +247,9 @@ textarea
 				font-size 14px
 				font-weight 700
 				color #3e6520
+				&:hover 
+					color verde
+					border-bottom 2px solid verde
 			.sub-menu
 				position absolute
 				background-color white
@@ -874,16 +882,24 @@ textarea
 .woocommerce div.product .woocommerce-tabs ul.tabs li
 	background-color verde2
 	color white
+	padding: 0 .5em;
 	a 
 		color white
+		
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active
 	background-color verde
+
+
+@media screen and (min-width:620px)
+	.woocommerce div.product .woocommerce-tabs ul.tabs li
+		padding: 0 1em;
 
 @media screen and (min-width:1000px)
 	.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs
 		position relative
 		width 600px
+
 .woocommerce div.product .woocommerce-tabs ul.tabs
 	margin 0 0 1em
 .tours
@@ -902,7 +918,7 @@ textarea
 			margin-bottom .5rem
 			img 
 				display block
-				height 240px
+				height 190px //240px
 				width: 100%;
 			h4
 				color white
@@ -928,12 +944,21 @@ textarea
 			&:hover
 				h4
 					background-color celeste
-		
+
+@media screen and (min-width:620px)
+	.tours
+		&-items 
+			.tours-item
+				width 49%
+				img 
+					height 240px
+						
 @media screen and (min-width:1000px)
 	.tours
 		&-items 
 			.tours-item
 				width 33%
+				
 
 .contact-page
 	display flex
@@ -984,6 +1009,8 @@ textarea
 	.about-info
 	.about-media
 		width 100%
+		iframe
+			width 100%
 	
 
 @media screen and (min-width:1000px)
@@ -1008,6 +1035,7 @@ textarea
 		width 100%
 		background-color rgba(#FFF, .8)
 		padding 1rem
+		margin-bottom 1rem
 		h2 
 			margin-bottom 0
 		&-img
