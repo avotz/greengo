@@ -26,14 +26,14 @@ get_header(); ?>
 					  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
 					  	 	?>
 					    	
-							<div class="item" style="background-image: url('<?php echo $thumb_url[0] ?>');">
-					  	  		
-					  	  	</div>
+						<div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo $thumb_url[0] ?>');">
+                    
+                  </div>
 							
 						<?php else : ?>
-					  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
-					  	  		
-					  	  </div>
+					  	<div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
+                    
+                </div>
 					  	 
 					  	<?php endif; ?>
                    

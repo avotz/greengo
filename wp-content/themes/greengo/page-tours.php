@@ -23,17 +23,17 @@ get_header(); ?>
                      <?php if ( has_post_thumbnail() ) :
 
 					  	 	$id = get_post_thumbnail_id($post->ID);
-					  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
+					  	 	$thumb_url = wp_get_attachment_image_src($id,'tour-gallery', true);
 					  	 	?>
 					    	
-							<div class="item" style="background-image: url('<?php echo $thumb_url[0] ?>');">
-					  	  		
-					  	  	</div>
+							<div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo $thumb_url[0] ?>');">
+                    
+                  </div>
 							
 						<?php else : ?>
-					  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
-					  	  		
-					  	  </div>
+					  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
+                    
+                </div>
 					  	 
 					  	<?php endif; ?>
                    
@@ -61,11 +61,15 @@ get_header(); ?>
             	
             
             <?php
+
+                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
                 $args = array(
                   'post_type' => 'product',
                   //'order' => 'ASC',
                   'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-                  'posts_per_page' => 10,
+                  'posts_per_page' => 14,
+                   'paged' => $paged,
                  'tax_query' => array(
                     array(
                       'taxonomy' => 'product_cat',
@@ -76,7 +80,11 @@ get_header(); ?>
                   
                 );
                 $items = new WP_Query( $args );
-                
+                 // Pagination fix
+                  $temp_query = $wp_query;
+                  $wp_query   = NULL;
+                  $wp_query   = $items;
+                  
                 if( $items->have_posts() ) {
                   while( $items->have_posts() ) {
                      $items->the_post();
@@ -112,11 +120,17 @@ get_header(); ?>
                                     </div>
                                     <div class="entry-excerpt-wrapper">
                                      <div class="entry-excerpt-price">
-                                       <span>From
-                                       <?php $product = new WC_Product( $post->ID ); 
-                                      /*echo $product->get_price_html();*/
+                                       <span>From 
+                                       <?php 
                                       
-                                     woocommerce_template_loop_price(); 
+                                        $currency = get_woocommerce_currency_symbol();
+
+                                       $product = new WC_Product( $post->ID ); 
+                                     /*echo $product->get_price_html();
+                                      
+                                     woocommerce_template_loop_price(); */
+                                      echo $currency;
+                                      echo get_post_meta( get_the_ID(), '_wc_booking_cost', true );
                                       // echo word_count(get_the_excerpt(), '24'); ?>
                                       </span>
                                      </div>
@@ -141,9 +155,11 @@ get_header(); ?>
                      
                   }
                 }
-                  the_posts_pagination( array( 'mid_size' => 2 ) ); 
+                
               ?>
               </div>
+              <?php  the_posts_pagination( array( 'mid_size' => 2 ) ); 
+                    wp_reset_postdata(); ?>
 
 		</div><!-- #main -->
 	</section><!-- #primary -->

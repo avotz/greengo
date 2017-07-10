@@ -3,11 +3,39 @@
   var btnMenu = $('#btn-menu'),
       menu = $('.header-menu');
      
+    new WOW().init();
     // $('.masonry-gallery').masonry({
     //   // options
     //   itemSelector: '.woocommerce-product-gallery__image',
     //   columnWidth: 100
     // });
+   
+    $('#menu-item-133 > a').click(function(e) {
+      e.preventDefault();
+     
+    });
+    //view more
+    $('.view-more').click(function(e) {
+      e.preventDefault();
+      $('.content-description').css({
+          'height': '72%'
+      });
+      $('.view-less').show();
+      $('.view-more').hide();
+  });
+  $('.view-less').click(function(e) {
+     e.preventDefault();
+      $('.content-description').css({
+          'height': '150px'
+      });
+      $('.view-more').show();
+      $('.view-less').hide();
+  });
+    
+    $('.ui-state-default').on('click', function(e){
+            e.preventDefault();
+           
+        });
     $('.masonry-gallery').isotope({
       layoutMode: 'masonry',
       itemSelector: '.woocommerce-product-gallery__image'
@@ -25,6 +53,19 @@
             menu.toggle();
            
         });
+
+       menu.find(".menu-item-has-children").hoverIntent({
+          over: function() {
+
+                $(this).find(">.sub-menu").slideDown(200 );
+              },
+          out:  function() {
+                
+                $(this).find(">.sub-menu").slideUp(200);
+              },
+          timeout: 200
+
+           });
       
       $(".date").flatpickr({
       minDate: "today",
@@ -198,13 +239,32 @@
 
     });
 
-    $(".owl-carousel").owlCarousel({
+    $(".banner-carousel").owlCarousel({
       animateOut: 'fadeOut',
       items : 1,
       autoplay : true,
-      autoplayTimeout: 4000,
+      autoplayTimeout: 5000,
       loop : true,
       nav : true,
+      navText : ['','']
+      /*onChange : function (e) {
+        console.log(e.target);
+        $('.owl-item.active span').addClass('animated');
+        $('.owl-item.active h1').addClass('animated');
+      }*/
+      /*slideSpeed : 300,
+      paginationSpeed : 400,*/
+      /*singleItem:true*/
+  });
+
+    $(".gallery-carousel").owlCarousel({
+      animateOut: 'fadeOut',
+      items : 1,
+      autoplay : true,
+      autoplayTimeout: 5000,
+      loop : true,
+      nav : true,
+      mouseDrag :false,
       navText : ['','']
       /*onChange : function (e) {
         console.log(e.target);
@@ -238,6 +298,27 @@
     });
 
       $('.accommodation-popup-link').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+
+                this.st.mainClass = 'mfp-zoom-out';
+                $('body').addClass('mfp-open');
+            },
+            beforeClose: function() {
+
+               
+                $('body').removeClass('mfp-open');
+            }
+
+        }
+
+       
+    });
+
+     $('.transportation-popup-link').magnificPopup({
         type: 'inline',
         midClick: true,
         removalDelay: 500, //delay removal by X to allow out-animation

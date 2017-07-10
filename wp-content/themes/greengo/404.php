@@ -9,8 +9,37 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section class="banner banner-page">
+               
+                    <!-- <article class="intro__content">
+                        <h2 class="intro__subtitle wow fadeInLeft">Explore Buggy tours</h2>
+                        <h1 class="intro__title wow fadeInRight">YOUR DREAM DESTINATION AWAITS</h1>
+
+                    </article> -->
+                     <?php if ( has_post_thumbnail() ) :
+
+					  	 	$id = get_post_thumbnail_id($post->ID);
+					  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
+					  	 	?>
+					    	
+							<div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo $thumb_url[0] ?>');">
+					  	  		
+					  	  	</div>
+							
+						<?php else : ?>
+					  	   <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
+					  	  		
+					  	  </div>
+					  	 
+					  	<?php endif; ?>
+                   
+               
+
+             
+
+       </section>
+	<section class="main">
+		<div class="inner">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
@@ -23,38 +52,17 @@ get_header(); ?>
 					<?php
 						get_search_form();
 
-						the_widget( 'WP_Widget_Recent_Posts' );
+						/*the_widget( 'WP_Widget_Recent_Posts' );*/
 					?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'greengo' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'greengo' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+					
+					
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div><!-- #main -->
+	</section><!-- #primary -->
 
 <?php
 get_footer();

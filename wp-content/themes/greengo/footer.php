@@ -13,14 +13,23 @@
 
 	<footer class="footer">
 		<div class="inner">
-			<div class="footer-social">
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-tripadvisor"></i></a>
-				<a href="#"><i class="fa fa-instagram"></i></a>
+			<div class="footer-container">
+				<div class="footer-social">
+					<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="tripadvisor"><img src="<?php echo get_template_directory_uri();  ?>/img/tripadvisor.png" alt="Pani Amor"></a>
+					<a href="#" class="instagram"><img src="<?php echo get_template_directory_uri();  ?>/img/instagram.png" alt="Pani Amor"></a>
+				</div>
+				<div class="footer-partners">
+					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/codigodeconducta-paniamor.png" alt="Pani Amor"></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/codigodeconducta-paniamor.png" alt="Pani Amor"></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/codigodeconducta-paniamor.png" alt="Pani Amor"></a>
+				</div>
+				<div class="copy">
+					<div>Green Go Costa Rica &copy; <?php echo date('Y'); ?> <i class="icon-avotz"></i></div>
+					<a href="mailto::info@greengocostarica.com">info@greengocostarica.com</a>
+				</div>
 			</div>
-			<div class="copy">
-				Green Go Costa Rica &copy; <?php echo date('Y'); ?>
-			</div>
+			
 		</div>
 	</footer>
 <div id="tour-popup" class="request-popup white-popup mfp-hide mfp-with-anim">

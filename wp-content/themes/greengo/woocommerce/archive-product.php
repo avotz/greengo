@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-	<section class="intro intro-page">
+	<section class="banner banner-page">
                
                     <!-- <article class="intro__content">
                         <h2 class="intro__subtitle wow fadeInLeft">Explore Buggy tours</h2>
@@ -39,9 +39,9 @@ get_header( 'shop' ); ?>
 					  	  	</div>
 							
 						<?php else : ?>
-					  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/intro.jpg');">
-					  	  		
-					  	  </div>
+					  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
+                    
+                		</div>
 					  	 
 					  	<?php endif; ?>
                    
@@ -50,112 +50,115 @@ get_header( 'shop' ); ?>
              
 
        </section>
-	 <section class="main">
-        <div class="inner">
-	<?php
-		/**
-		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 * @hooked WC_Structured_Data::generate_website_data() - 30
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
 
-    <header class="woocommerce-products-header">
+       <section class="main">
+		<div class="inner">
 
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+			<h1 class="entry-title">Activities</h1>
+			 <div class="tours-items">
+            	
+            
+            <?php
 
-			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-		<?php endif; ?>
+                $args = array(
+                  'post_type' => 'product',
+                  //'order' => 'ASC',
+                  'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+                  'posts_per_page' => 14,
+                   'paged' => $paged,
+                 'tax_query' => array(
+                    array(
+                      'taxonomy' => 'product_cat',
+                      'field' => 'slug',
+                      'terms' => 'tour'
+                    )
+                  )
+                  
+                );
+                $items = new WP_Query( $args );
+                 // Pagination fix
+                  $temp_query = $wp_query;
+                  $wp_query   = NULL;
+                  $wp_query   = $items;
+                  
+                if( $items->have_posts() ) {
+                  while( $items->have_posts() ) {
+                     $items->the_post();
+                   
+                    ?>
 
-		<?php
-			/**
-			 * woocommerce_archive_description hook.
-			 *
-			 * @hooked woocommerce_taxonomy_archive_description - 10
-			 * @hooked woocommerce_product_archive_description - 10
-			 */
-			do_action( 'woocommerce_archive_description' );
-		?>
+                      
+                         <article class="tours-item" >
+                            <div class="entry-content grid-item">
+                                <figure class="entry-thumbnail">
+                                <a href="<?php the_permalink(); ?>">
+                                     <?php if ( has_post_thumbnail() ) :
 
-    </header>
+                                          $id = get_post_thumbnail_id($post->ID);
+                                          $thumb_url = wp_get_attachment_image_src($id,'large', true);
+                                          ?>
+                                          
+                                       
+                                        
+                                      <?php endif; ?>
+                                      <img src="<?php echo $thumb_url[0] ?>"  alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+                                  </a>
+                                </figure>
+                                <div class="entry-excerpt">
+                                    <div class="entry-header">
+                                    <div class="tour-title">
+                                    
+                        
+                                    <h4>
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                                    </h4>
+                                    </div>
+                                    </div>
+                                    <div class="entry-excerpt-wrapper">
+                                     <div class="entry-excerpt-price">
+                                       <span>From 
+                                       <?php 
+                                      
+                                        $currency = get_woocommerce_currency_symbol();
 
-		<?php if ( have_posts() ) : ?>
-
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook.
-				 *
-				 * @hooked wc_print_notices - 10
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
-
-			<?php woocommerce_product_loop_start(); ?>
-
-				<?php woocommerce_product_subcategories(); ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
-						/**
-						 * woocommerce_shop_loop hook.
-						 *
-						 * @hooked WC_Structured_Data::generate_product_data() - 10
-						 */
-						do_action( 'woocommerce_shop_loop' );
-					?>
-
-					<?php wc_get_template_part( 'content', 'product' ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			<?php woocommerce_product_loop_end(); ?>
-
-			<?php
-				/**
-				 * woocommerce_after_shop_loop hook.
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop' );
-			?>
-
-		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-			<?php
-				/**
-				 * woocommerce_no_products_found hook.
-				 *
-				 * @hooked wc_no_products_found - 10
-				 */
-				do_action( 'woocommerce_no_products_found' );
-			?>
-
-		<?php endif; ?>
-
-	<?php
-		/**
-		 * woocommerce_after_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		//do_action( 'woocommerce_sidebar' );
-	?>
-	</div>
-</section>
+                                       $product = new WC_Product( $post->ID ); 
+                                     /*echo $product->get_price_html();
+                                      
+                                     woocommerce_template_loop_price(); */
+                                      echo $currency;
+                                      echo get_post_meta( get_the_ID(), '_wc_booking_cost', true );
+                                      // echo word_count(get_the_excerpt(), '24'); ?>
+                                      </span>
+                                     </div>
+                                     <div>
+                                       <a href="<?php the_permalink(); ?>" >
+                                      
+                                       View Tour
+                                     
+                                      
+                                       </a>
+                                     </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    
+                     
+                      
+                    <?php
+                   
+                     
+                  }
+                }
+                
+              ?>
+              </div>
+				 <?php  the_posts_pagination( array( 'mid_size' => 2 ) ); 
+                    wp_reset_postdata();  ?>
+		</div><!-- #main -->
+	</section><!-- #primary -->
+	
 <?php get_footer( 'shop' ); ?>

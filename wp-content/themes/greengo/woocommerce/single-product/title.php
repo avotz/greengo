@@ -19,11 +19,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }?>
-<div class="inner">
+
 	<?php
 the_title( '<h1 class="product_title entry-title">', '</h1>' );
 
 ?>
-<a href="#product-short-description" class="btn btn-product-readmore anchor">Read more <i class="fa fa-angle-down"></i></a>
-</div>
+<!-- <a href="#product-short-description" class="btn btn-product-readmore anchor">Read more <i class="fa fa-angle-down"></i></a> -->
+
 

@@ -47,7 +47,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 
 		
 		?>
-		<figure class="woocommerce-product-gallery__wrapper tour-banner" style="background-image: url('<?php echo esc_url( $full_size_image[0] ) ?>');">
+		<figure class="woocommerce-product-gallery__wrapper tour-banner" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo esc_url( $full_size_image[0] ) ?>');">
 			
 		</figure> 
 	</figure>

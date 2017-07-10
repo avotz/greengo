@@ -37,17 +37,17 @@ if($category->parent == 0){
 <div class="product-buttons">
 	
 	<?php if($cat == 'tour') : ?>
-		<p class="price">From <?php echo $product->get_price_html(); ?></p>
+		<p class="price"><?php echo $product->get_price_html(); ?></p>
 		<a href="#tour-popup" class="btn verde tour-popup-link" data-title="<?php echo $product->get_slug(); ?>">
 	  
-       Inquery now
+       Inquire now
       
       </a>
 	<?php else: ?>
 		<p class="price"><?php echo $product->get_price_html(); ?></p>
 		<a href="#accommodation-popup" class="btn verde accommodation-popup-link" data-title="<?php echo $product->get_slug(); ?>">
 	  
-       Inquery now
+       Inquire now
       
       </a>
 	<?php endif; ?>
