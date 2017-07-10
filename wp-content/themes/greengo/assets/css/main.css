@@ -1765,6 +1765,14 @@ textarea {
 .tours-items .tours-item a {
   color: #fff;
 }
+.tours-items .tours-item a.button {
+  background-color: #92bf4f;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.tours-items .tours-item a.button:hover {
+  background-color: #3e6520;
+}
 .tours-items .tours-item .entry-content {
   padding: 0;
   background-color: transparent;
