@@ -26,7 +26,7 @@
 					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/luxury-air.png" alt="luxury air"></a>
 				</div>
 				<div class="copy">
-					<div>Green Go Costa Rica &copy; <?php echo date('Y'); ?> <i class="icon-avotz"></i></div>
+					<div>Green Go Costa Rica &copy; <?php echo (date('Y') == 2017) ? date('Y') : '2017-'.date('Y'); ?> <i class="icon-avotz"></i></div>
 					<a href="mailto:info@greengocostarica.com">info@greengocostarica.com</a>
 				</div>
 			</div>
