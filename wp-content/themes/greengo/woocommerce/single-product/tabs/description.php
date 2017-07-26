@@ -21,12 +21,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post;
-
+global $product;
 $heading = esc_html( apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) ) );
 
 ?>
 
 <div class="product-description">
+	<?php if($product->get_attribute( 'pa_fitness-level' )) : ?>
+	<div class="fitness-level">
+		<strong>Fitness Level</strong>
+		<div class="fitness-img">
+			<img src="<?php echo get_template_directory_uri();  ?>/img/<?php echo sanitize_title($product->get_attribute( 'pa_fitness-level' )); ?>.png" alt="<?php echo $product->get_attribute( 'pa_fitness-level' ); ?>">
+		</div>
+		
+	</div>
+<?php endif; ?>
 	<?php the_content(); ?>
+
+	
 </div>
 

@@ -619,13 +619,15 @@ textarea {
   width: 100%;
   height: 32px;
   background-color: #fff !important;
+  border-radius: 5px;
+  border: 1px solid #aaa;
 }
 textarea {
   height: 90px;
 }
 .select2-container--default .select2-selection--single,
 .select2-container--default .select2-selection--multiple {
-  border-radius: 0 !important;
+  border-radius: 5px !important;
   min-height: 36px !important;
 }
 .select2-container {
@@ -709,6 +711,19 @@ textarea {
   border-color: rgba(0,0,0,0.09);
   z-index: 999;
 }
+.header-contact {
+  position: absolute;
+  right: 12rem;
+  top: 0;
+  z-index: 3;
+  background-color: rgba(0,0,0,0.45);
+}
+.header-contact a {
+  font-size: 1rem;
+  display: inline-block;
+  color: #fff;
+  padding: 1rem 1rem;
+}
 .header-social {
   position: absolute;
   right: 0;
@@ -733,7 +748,7 @@ textarea {
 }
 .header-logo {
   display: inline-block;
-  width: 100px;
+  width: 260px;
 }
 .header-logo-font {
   display: none;
@@ -745,7 +760,7 @@ textarea {
 .header-menu {
   display: none;
   position: absolute;
-  top: 81px;
+  top: 92px;
   left: 0;
   right: 0;
   background-color: #92bf4f;
@@ -846,7 +861,7 @@ textarea {
   }
   .header-menu a {
     display: block;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     font-size: 14px;
     font-weight: 700;
     color: #3e6520;
@@ -864,7 +879,6 @@ textarea {
     line-height: 50px;
   }
   .header--fixed {
-    height: 80px;
     position: fixed;
     top: 0;
   }
@@ -872,11 +886,11 @@ textarea {
     background-color: transparent;
   }
   .header--fixed .header-logo {
-    width: 90px;
+    width: 250px;
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    margin-top: 5px;
+    margin-top: 0;
   }
   .header--fixed .header-menu {
     border-top: none;
@@ -886,6 +900,11 @@ textarea {
     padding-top: 1rem;
     color: #fff;
     line-height: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-menu a {
+    padding: 0 1rem;
   }
 }
 .banner {
@@ -1241,6 +1260,10 @@ textarea {
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
+.call-info p {
+  text-transform: uppercase;
+  font-weight: 800;
+}
 @media screen and (min-width: 768px) {
   .call {
     padding-top: 10rem;
@@ -1331,7 +1354,7 @@ textarea {
 }
 .footer-partners a {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   width: 110px;
   padding: 0 0.5rem;
 }
@@ -1343,15 +1366,15 @@ textarea {
   display: inline-block;
   vertical-align: top;
   color: #777;
-  font-size: 2.5rem;
-  padding: 0.5rem 1rem;
-  width: 90px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 55px;
 }
 .footer-social .facebook {
   color: #465994;
 }
 .footer-social .instagram {
-  width: 75px;
+  width: 45px;
 }
 .footer .copy {
   width: 100%;
@@ -1371,10 +1394,25 @@ textarea {
   .footer {
     position: absolute;
   }
-  .footer-partners,
-  .footer-social,
+  .footer-social {
+    width: 20%;
+  }
+  .footer-social a {
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    width: 60px;
+  }
+  .footer-social .facebook {
+    color: #465994;
+  }
+  .footer-social .instagram {
+    width: 55px;
+  }
+  .footer-partners {
+    width: 43%;
+  }
   .footer .copy {
-    width: 33.33%;
+    width: 30%;
   }
 }
 .main {
@@ -1655,6 +1693,32 @@ textarea {
 .woocommerce input.button.alt:hover {
   background-color: #92bf4f;
 }
+.woocommerce #respond input#submit.alt.disabled,
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt:disabled,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt:disabled[disabled],
+.woocommerce #respond input#submit.alt:disabled[disabled]:hover,
+.woocommerce a.button.alt.disabled,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt:disabled,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt:disabled[disabled],
+.woocommerce a.button.alt:disabled[disabled]:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled[disabled],
+.woocommerce input.button.alt:disabled[disabled]:hover {
+  background-color: #92bf4f;
+}
 .grid-item--width2 {
   width: 600px;
 }
@@ -1667,24 +1731,18 @@ textarea {
   top: 6rem;
   left: 1rem;
   background-color: rgba(255,255,255,0.9);
+/*.description
+		padding 0 1rem 1rem
+	.owl-carousel
+		padding 1rem
+	.cart
+		padding 1rem*/
 }
-.woocommerce #content div.product .woocommerce-tabs .description,
-.woocommerce div.product .woocommerce-tabs .description,
-.woocommerce-page #content div.product .woocommerce-tabs .description,
-.woocommerce-page div.product .woocommerce-tabs .description {
-  padding: 0 1rem 1rem;
-}
-.woocommerce #content div.product .woocommerce-tabs .owl-carousel,
-.woocommerce div.product .woocommerce-tabs .owl-carousel,
-.woocommerce-page #content div.product .woocommerce-tabs .owl-carousel,
-.woocommerce-page div.product .woocommerce-tabs .owl-carousel {
+.woocommerce div.product .woocommerce-tabs .panel {
   padding: 1rem;
 }
-.woocommerce #content div.product .woocommerce-tabs .cart,
-.woocommerce div.product .woocommerce-tabs .cart,
-.woocommerce-page #content div.product .woocommerce-tabs .cart,
-.woocommerce-page div.product .woocommerce-tabs .cart {
-  padding: 1rem;
+.woocommerce div.product .woocommerce-tabs .panel ul {
+  margin-left: 15px;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
   background-color: #3e6520;
@@ -1818,6 +1876,10 @@ textarea {
     width: 33%;
   }
 }
+.accommodation .entry-excerpt-wrapper {
+  display: block !important;
+  text-align: center;
+}
 .contact-page {
   display: -webkit-box;
   display: -moz-box;
@@ -1868,6 +1930,7 @@ textarea {
     margin-top: 3rem;
   }
 }
+.fishing-page,
 .about-page {
   display: -webkit-box;
   display: -moz-box;
@@ -1890,29 +1953,50 @@ textarea {
   background-color: rgba(255,255,255,0.8);
   padding: 1rem;
 }
+.fishing-page h1,
 .about-page h1 {
   color: #92bf4f;
 }
+.fishing-page .widSSP,
 .about-page .widSSP {
   width: 100% !important;
 }
+.fishing-page ul,
 .about-page ul {
   margin-left: 45px;
   margin-bottom: 1rem;
 }
+.fishing-page .about-info,
 .about-page .about-info,
-.about-page .about-media {
+.fishing-page .about-media,
+.about-page .about-media,
+.fishing-page .fishing-info,
+.about-page .fishing-info,
+.fishing-page .fishing-media,
+.about-page .fishing-media {
   width: 100%;
 }
+.fishing-page .about-info iframe,
 .about-page .about-info iframe,
-.about-page .about-media iframe {
+.fishing-page .about-media iframe,
+.about-page .about-media iframe,
+.fishing-page .fishing-info iframe,
+.about-page .fishing-info iframe,
+.fishing-page .fishing-media iframe,
+.about-page .fishing-media iframe {
   width: 100%;
 }
 @media screen and (min-width: 1000px) {
-  .about-page .about-info {
+  .fishing-page .about-info,
+  .about-page .about-info,
+  .fishing-page .fishing-info,
+  .about-page .fishing-info {
     width: 60%;
   }
-  .about-page .about-media {
+  .fishing-page .about-media,
+  .about-page .about-media,
+  .fishing-page .fishing-media,
+  .about-page .fishing-media {
     width: 35%;
     margin-top: 3rem;
   }
@@ -2026,4 +2110,38 @@ textarea {
   background-color: rgba(255,255,255,0.8);
   padding: 1rem;
   text-align: center;
+}
+.fitness-level {
+  margin-right: 0rem;
+  text-align: center;
+}
+.fitness-level strong {
+  display: block;
+}
+.fitness-img {
+  width: 100px;
+  display: inline-block;
+}
+@media screen and (min-width: 490px) {
+  .fitness-level {
+    float: right;
+    margin-left: 1rem;
+  }
+}
+.page-carousel .item {
+  height: 250px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.page-carousel .item a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }

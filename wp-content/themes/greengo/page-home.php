@@ -13,6 +13,9 @@
  */
 
 get_header(); ?>
+	<div class="header-contact">
+		<a href="mailto:info@greengocostarica.com">info@greengocostarica.com</a>
+	</div>
 	<div class="header-social">
 		<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
 		<a href="#" class="tripadvisor"><i class="fa fa-tripadvisor"></i></a>
@@ -27,7 +30,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>A signature of excellence!</p>
+		  	  			<p>a signature of excellence!</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -37,7 +40,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>Let us take u places people don’t even know exits</p>
+		  	  			<p>Let us take you to places most people don’t even know exist</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -47,7 +50,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>Limitless bespoke services tailored to the most discerning clientele.</p>
+		  	  			<p>Limitless bespoke services tailored to the most discerning clientele</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -57,7 +60,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>Let us transform your trip into a immensely pleasurable experience.</p>
+		  	  			<p>Let us transform your trip into a immensely pleasurable experience</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -68,7 +71,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>Tailored concierge services experiences to fit your specific needs and lifestyle.</p>
+		  	  			<p>Tailored concierge services experiences to fit your specific needs and lifestyle</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -78,7 +81,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>Transform the impossible into a breath-taking once in a lifetime memories.</p>
+		  	  			<p>Transform the impossible into a breathtaking once in a lifetime memories</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -111,19 +114,19 @@ get_header(); ?>
 	<section id="services" class="services">
 		<div class="inner">
 
-			  <h2>Specialty Concierge </h2>
+			  <h2>Concierge Services</h2>
 		  	  <div class="services-container">
 		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/accommodations.jpg');">
 		  	  		<div class="services-item-info">
-		  	  			<h3>Luxury Accomodation</h3>
-		  	  			<p>Luxury Houses & villas</p>
+		  	  			<h3>Luxury Accommodation</h3>
+		  	  			<p>Luxury Rentals</p>
 		  	  		</div>
-		  	  		<a href="<?php echo esc_url( home_url( '/luxury-accomodation' ) ); ?>" class="services-item-link"></a>
+		  	  		<a href="<?php echo esc_url( home_url( '/luxury-accommodation' ) ); ?>" class="services-item-link"></a>
 		  	  	</div>
 		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/air-transportation.jpg');">
 		  	  		<div class="services-item-info">
-		  	  			<h3>Transport</h3>
-		  	  			<p>Air charter service </p>
+		  	  			<h3>Air Transportation</h3>
+		  	  			<p>Air Charter Service</p>
 		  	  		</div>
 		  	  		<a href="<?php echo esc_url( home_url( '/air-transportation' ) ); ?>" class="services-item-link"></a>
 		  	  	</div>

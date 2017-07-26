@@ -20,13 +20,14 @@
 					<a href="#" class="instagram"><img src="<?php echo get_template_directory_uri();  ?>/img/instagram.png" alt="Pani Amor"></a>
 				</div>
 				<div class="footer-partners">
-					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/codigodeconducta-paniamor.png" alt="Pani Amor"></a>
-					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/codigodeconducta-paniamor.png" alt="Pani Amor"></a>
-					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/codigodeconducta-paniamor.png" alt="Pani Amor"></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/codigodeconducta.png" alt="Codigo de conducta"></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/paniamor.png" alt="Pani Amor"></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/carmonair.png" alt="carmonair"></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/luxury-air.png" alt="luxury air"></a>
 				</div>
 				<div class="copy">
 					<div>Green Go Costa Rica &copy; <?php echo date('Y'); ?> <i class="icon-avotz"></i></div>
-					<a href="mailto::info@greengocostarica.com">info@greengocostarica.com</a>
+					<a href="mailto:info@greengocostarica.com">info@greengocostarica.com</a>
 				</div>
 			</div>
 			

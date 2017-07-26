@@ -178,3 +178,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Implement the Woocommerce.
  */
 require get_template_directory() . '/inc/wc.php';
+
+/**
+ * Implement the metabox custom post type.
+ */
+require get_template_directory() . '/inc/cpt.php';

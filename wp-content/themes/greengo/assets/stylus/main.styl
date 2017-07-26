@@ -64,11 +64,13 @@ textarea
 	width 100%
 	height 32px
 	background-color white !important
+	border-radius 5px
+	border 1px solid #aaa
 textarea
 	height 90px
 .select2-container--default .select2-selection--single
 .select2-container--default .select2-selection--multiple
-	border-radius 0 !important
+	border-radius 5px !important
 	min-height 36px !important
 .select2-container
 	width 100% !important
@@ -137,6 +139,17 @@ textarea
 	border-bottom: 1px solid #d9d9d9;
 	border-color: rgba(0,0,0,0.09);
 	z-index: 999;
+	&-contact 
+		position absolute
+		right 12rem
+		top 0
+		z-index 3
+		background-color rgba(0,0,0,.45)
+		a 
+			font-size 1rem
+			display inline-block
+			color white
+			padding 1rem 1rem
 	&-social
 		position absolute
 		right 0
@@ -159,7 +172,7 @@ textarea
 				color #D52E83
 	&-logo 
 		display inline-block
-		width 100px
+		width 260px//100px
 		&-font 
 			display none
 			text-transform uppercase
@@ -169,7 +182,7 @@ textarea
 	&-menu 
 		display: none;
 		position: absolute;
-		top: 81px;
+		top: 92px;
 		left: 0;
 		right: 0;
 		background-color: verde;
@@ -243,7 +256,7 @@ textarea
 				position relative
 			a 
 				display block
-				padding 0 1rem
+				padding 0 .5rem
 				font-size 14px
 				font-weight 700
 				color #3e6520
@@ -259,15 +272,15 @@ textarea
 				
 		&--fixed
 			//background-color #000
-			height 80px
+			//height 80px
 			position fixed
 			top 0
 			.header-container
 				background-color transparent
 			.header-logo
-				width 90px//70px
+				width 250px//70px
 				opacity 1
-				margin-top 5px
+				margin-top 0//5px
 			.header-menu
 				border-top none
 				line-height: 71px;
@@ -276,7 +289,11 @@ textarea
 					color white
 					line-height 30px
 					//font-size 1rem 
-
+@media screen and (min-width: 1200px)
+	.header
+		&-menu
+			a
+				padding 0 1rem
 .banner
 	width 100%
 	height 30vh
@@ -545,6 +562,9 @@ textarea
 				bottom -10px
 				left 50%
 				transform translate(-50%, 0)
+		p 
+			text-transform uppercase
+			font-weight 800
 @media screen and (min-width: 768px)
 	.call
 		padding-top 10rem
@@ -601,7 +621,7 @@ textarea
 		
 		a 
 			display inline-block
-			vertical-align top
+			vertical-align middle
 			width 110px
 			padding 0 .5rem
 	&-social
@@ -611,13 +631,13 @@ textarea
 			display inline-block
 			vertical-align top 
 			color gris
-			font-size 2.5rem
-			padding .5rem 1rem
-			width 90px
+			font-size 1.5rem//2.5rem
+			padding .5rem //1rem
+			width 55px//70px
 		.facebook
 			color #465994
 		.instagram
-			width 75px
+			width 45px//70px
 	.copy
 		width 100%
 		//line-height 4rem
@@ -636,10 +656,20 @@ textarea
 @media screen and (min-width: 1000px)
 	.footer
 		position absolute
-		&-partners
 		&-social
+			width 20%
+			a 
+				font-size 2.5rem
+				padding .5rem 
+				width 60px
+			.facebook
+				color #465994
+			.instagram
+				width 55px
+		&-partners
+			width 43%
 		.copy
-			width 33.33%
+			width 30%
 			//position absolute
 			
 .main 
@@ -861,6 +891,10 @@ textarea
 	background-color verde2
 .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover
 	background-color verde
+
+.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover
+		background-color verde
+		
 .grid-item--width2
 	width: 600px;
 
@@ -872,12 +906,16 @@ textarea
 	left 1rem
 	background-color rgba(#fff, .9)
 	//transform translate(0, -50%)
-	.description
+	/*.description
 		padding 0 1rem 1rem
 	.owl-carousel
 		padding 1rem
 	.cart
-		padding 1rem
+		padding 1rem*/
+.woocommerce div.product .woocommerce-tabs .panel
+	padding 1rem
+	ul 
+		margin-left 15px
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li
 	background-color verde2
@@ -965,7 +1003,11 @@ textarea
 			.tours-item
 				width 33%
 				
-
+.accommodation
+	.entry-excerpt-wrapper
+		display block !important
+		text-align center
+			
 .contact-page
 	display flex
 	flex-wrap wrap
@@ -997,7 +1039,7 @@ textarea
 			width 48%
 		.contact-media
 			margin-top 3rem
-
+.fishing-page
 .about-page
 	display flex
 	flex-wrap wrap
@@ -1014,16 +1056,21 @@ textarea
 		margin-bottom 1rem
 	.about-info
 	.about-media
+	.fishing-info
+	.fishing-media
 		width 100%
 		iframe
 			width 100%
 	
 
 @media screen and (min-width:1000px)
+	.fishing-page
 	.about-page
 		.about-info
+		.fishing-info
 			width 60%
 		.about-media
+		.fishing-media
 			width 35%
 			margin-top 3rem
 
@@ -1102,3 +1149,32 @@ textarea
 	background-color rgba(#fff, .8)
 	padding 1rem
 	text-align center
+
+.fitness-level
+	margin-right 0rem
+	text-align center
+	strong
+		display block
+.fitness-img
+	width 100px 
+	display inline-block
+
+@media screen and (min-width:490px)
+	.fitness-level
+		float right
+		margin-left 1rem
+
+.page-carousel
+	.item 
+		height 250px
+		width 100%
+		background-size cover
+		background-repeat no-repeat
+		background-position center center
+		position relative
+		a 
+			position absolute
+			left 0
+			right 0
+			top 0
+			bottom 0	

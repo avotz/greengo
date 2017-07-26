@@ -84,7 +84,7 @@ get_header(); ?>
                     ?>
 
                       
-                         <article class="tours-item" >
+                         <article class="tours-item accommodation" >
                             <div class="entry-content grid-item">
                                 <figure class="entry-thumbnail">
                                 <a href="<?php the_permalink(); ?>">
@@ -113,9 +113,9 @@ get_header(); ?>
                                     <div class="entry-excerpt-wrapper">
                                     
                                        <?php 
-                                        echo word_count(get_the_excerpt(), '24'); ?>
+                                        /*echo word_count(get_the_excerpt(), '24');*/?>
                                     
-                                     
+                                       
                                        <a href="<?php the_permalink(); ?>" class="button">
                                       
                                        View more

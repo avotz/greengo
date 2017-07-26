@@ -40,14 +40,15 @@ if($category->parent == 0){
 		<p class="price"><?php echo $product->get_price_html(); ?></p>
 		<a href="#tour-popup" class="btn verde tour-popup-link" data-title="<?php echo $product->get_slug(); ?>">
 	  
-       Inquire now
+       Inquiry Now!
       
       </a>
 	<?php else: ?>
-		<p class="price"><?php echo $product->get_price_html(); ?></p>
+		<!-- <p class="price"><?php echo $product->get_price_html(); ?></p> -->
+		<p style="color:#000;">For reservations please contact to check availability of houses and villas.</p>
 		<a href="#accommodation-popup" class="btn verde accommodation-popup-link" data-title="<?php echo $product->get_slug(); ?>">
 	  
-       Inquire now
+      Inquiry Now!
       
       </a>
 	<?php endif; ?>

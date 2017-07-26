@@ -18,7 +18,7 @@
     $('.view-more').click(function(e) {
       e.preventDefault();
       $('.content-description').css({
-          'height': '72%'
+          'height': 'auto'
       });
       $('.view-less').show();
       $('.view-more').hide();
@@ -36,12 +36,18 @@
             e.preventDefault();
            
         });
-    $('.masonry-gallery').isotope({
+    /*$('.masonry-gallery').isotope({
       layoutMode: 'masonry',
       itemSelector: '.woocommerce-product-gallery__image'
-    });
+    });*/
 
     $('.woocommerce-product-gallery__image a').magnificPopup({
+      type: 'image',
+      gallery:{
+        enabled:true
+      }
+    });
+     $('.page-carousel a').magnificPopup({
       type: 'image',
       gallery:{
         enabled:true
@@ -238,6 +244,23 @@
             .slideUp(200);*/
 
     });
+    $(".page-carousel").owlCarousel({
+      animateOut: 'fadeOut',
+      items : 1,
+      autoplay : true,
+      autoplayTimeout: 5000,
+      loop : true,
+      nav : true,
+      navText : ['','']
+      /*onChange : function (e) {
+        console.log(e.target);
+        $('.owl-item.active span').addClass('animated');
+        $('.owl-item.active h1').addClass('animated');
+      }*/
+      /*slideSpeed : 300,
+      paginationSpeed : 400,*/
+      /*singleItem:true*/
+  });
 
     $(".banner-carousel").owlCarousel({
       animateOut: 'fadeOut',
@@ -276,6 +299,26 @@
       /*singleItem:true*/
   });
 
+$('.fishing-popup-link').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+
+                this.st.mainClass = 'mfp-zoom-out';
+                $('body').addClass('mfp-open');
+            },
+            beforeClose: function() {
+
+               
+                $('body').removeClass('mfp-open');
+            }
+
+        }
+
+       
+    });
      $('.tour-popup-link').magnificPopup({
         type: 'inline',
         midClick: true,
@@ -433,6 +476,17 @@
    
 
       });
+
+     $('.fishing-popup-link').on('click',function (e) {
+      
+    
+     
+      $('#fishing-popup').find('input[name="your-subject"]').val( $(this).attr('data-title') );
+      
+      
+
+      });
+
 
 
 
