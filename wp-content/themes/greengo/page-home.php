@@ -71,7 +71,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>Tailored concierge services experiences to fit your specific needs and lifestyle</p>
+		  	  			<p>Tailored concierge services to fit your specific needs and lifestyle</p>
 		  	  		</div>
 		  	  		
 		  	  
