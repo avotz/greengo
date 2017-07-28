@@ -23,7 +23,7 @@ get_header(); ?>
                      <?php if ( has_post_thumbnail() ) :
 
 					  	 	$id = get_post_thumbnail_id($post->ID);
-					  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
+					  	 	$thumb_url = wp_get_attachment_image_src($id,'tour-gallery', true);
 					  	 	?>
 					    	
 							<div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/pattern.png'), url('<?php echo $thumb_url[0] ?>');">
