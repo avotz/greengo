@@ -1358,6 +1358,9 @@ textarea {
   width: 110px;
   padding: 0 0.5rem;
 }
+.footer-partners .luxury-air {
+  width: 155px;
+}
 .footer-social {
   width: 100%;
   margin-bottom: 1rem;
@@ -1409,10 +1412,10 @@ textarea {
     width: 55px;
   }
   .footer-partners {
-    width: 43%;
+    width: 50%;
   }
   .footer .copy {
-    width: 30%;
+    width: 23%;
   }
 }
 .main {
