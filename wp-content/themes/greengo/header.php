@@ -33,7 +33,7 @@
 <?php endif ?>
 
     <div class="inner">
-        <!-- <span class="header-logo-font">Green Go</span> --><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_template_directory_uri();  ?>/img/logo-lema.png" alt="Green Go" /></a>
+        <!-- <span class="header-logo-font">Green Go</span> --><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_template_directory_uri();  ?>/img/logo-slogan.png" alt="Green Go" /></a>
        
      
         <button id="btn-menu" class="header-btn-menu">

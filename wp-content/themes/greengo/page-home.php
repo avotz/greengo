@@ -30,7 +30,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>a signature of excellence!</p>
+		  	  			<p>A signature of excellence!</p>
 		  	  		</div>
 		  	  		
 		  	  
@@ -101,7 +101,7 @@ get_header(); ?>
 			<div class="call-container">
 				
 				<div class="call-info">
-					<h2>Activities. </h2>
+					<h2>Activities</h2>
 			  	  	<p>Best tours in Costa Rica</p>
 			  	  	<a href="<?php echo esc_url( home_url( '/activities' ) ); ?>" class="services-item-link"></a>
 				</div>
