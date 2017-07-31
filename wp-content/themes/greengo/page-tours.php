@@ -130,7 +130,11 @@ get_header(); ?>
                                       
                                      woocommerce_template_loop_price(); */
                                       echo $currency;
-                                      echo get_post_meta( get_the_ID(), '_wc_booking_cost', true );
+                                      
+                                      if(get_post_meta( get_the_ID(), '_wc_display_cost', true ))
+                                        echo get_post_meta( get_the_ID(), '_wc_display_cost', true );
+                                      else 
+                                        echo get_post_meta( get_the_ID(), '_wc_booking_cost', true )
                                       // echo word_count(get_the_excerpt(), '24'); ?>
                                       </span>
                                      </div>
