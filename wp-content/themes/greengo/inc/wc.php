@@ -144,6 +144,31 @@ function woo_book_tab_content() {
   
 }
 
+//agregar tab rates con la informacio de rates
+add_filter( 'woocommerce_product_tabs', 'woo_rates_tab' );
+function woo_rates_tab( $tabs ) {
+  
+  // Adds the new tab
+  
+  $tabs['rates'] = array(
+    'title'   => __( 'Rates', 'woocommerce' ),
+    'priority'  => 50,
+    'callback'  => 'woo_rates_tab_content'
+  );
+
+  return $tabs;
+
+}
+function woo_rates_tab_content() {
+
+  // The new tab content
+
+  echo '<h2>Rates</h2>';
+  //echo '<p>Here\'s your new product tab.</p>';
+  echo rwmb_meta( 'rw_rates'); 
+  
+}
+
 
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );

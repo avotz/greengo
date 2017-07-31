@@ -25,5 +25,27 @@ function greengo_register_meta_boxes( $meta_boxes ) {
         )
     );
     
+     // 1st meta box
+    $meta_boxes[] = array(
+        'id'         => 'additional',
+        'title'      => __( 'Additional Information', 'greengo' ),
+        'post_types' => array( 'product'),
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'fields' => array(
+            array(
+                'name'  => 'Rates',
+                'desc'  => 'Rates',
+                'id'    => $prefix . 'rates',
+                'type'  => 'WYSIWYG',
+                'options' => array('textarea_rows'=> 5),
+                'std'   => '',
+                'class' => 'custom-class'
+                
+            ),
+            
+        )
+    );
+    
     return $meta_boxes;
 }

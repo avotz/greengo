@@ -1756,8 +1756,44 @@ textarea {
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
   color: #fff;
 }
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+  color: #92bf4f;
+}
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
   background-color: #92bf4f;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a:hover {
+  color: #fff;
+}
+.details_tab a::before {
+  content: '\f00b' !important;
+  font-family: 'FontAwesome';
+  font-weight: normal !important;
+  padding-right: 0.5rem;
+}
+.gallery_tab a::before {
+  content: '\f03e' !important;
+  font-family: 'FontAwesome';
+  font-weight: normal !important;
+  padding-right: 0.5rem;
+}
+.rates_tab a::before {
+  content: '\f155' !important;
+  font-family: 'FontAwesome';
+  font-weight: normal !important;
+  padding-right: 0.5rem;
+}
+.book_tab a::before {
+  content: '\f07a' !important;
+  font-family: 'FontAwesome';
+  font-weight: normal !important;
+  padding-right: 0.5rem;
+}
+.description_tab a::before {
+  content: '\f044' !important;
+  font-family: 'FontAwesome';
+  font-weight: normal !important;
+  padding-right: 0.5rem;
 }
 @media screen and (min-width: 620px) {
   .woocommerce div.product .woocommerce-tabs ul.tabs li {
