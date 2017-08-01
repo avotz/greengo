@@ -60,7 +60,7 @@ get_header(); ?>
 		  	  		
 		  	  		<div class="item-info">
 		  	  			<h2>Green Go Costa Rica</h2>
-		  	  			<p>Let us transform your trip into a immensely pleasurable experience</p>
+		  	  			<p>Let us transform your trip into an immensely pleasurable experience</p>
 		  	  		</div>
 		  	  		
 		  	  

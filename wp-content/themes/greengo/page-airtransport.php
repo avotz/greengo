@@ -87,7 +87,7 @@ get_header(); ?>
 										?>
 										<a href="#transportation-popup" class="btn verde tour-popup-link">
 										  
-									       Inquery now
+									       Inquiry Now!
 									      
 									      </a>
 									</div>
@@ -135,7 +135,7 @@ get_header(); ?>
 										?>
 										<a href="#transportation-popup" class="btn verde tour-popup-link">
 										  
-									       Inquire now
+									       Inquiry Now!
 									      
 									      </a>
 									</div>

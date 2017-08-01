@@ -1395,9 +1395,6 @@ textarea {
   vertical-align: middle;
 }
 @media screen and (min-width: 1000px) {
-  .footer {
-    position: absolute;
-  }
   .footer-social {
     width: 20%;
   }
@@ -1422,7 +1419,7 @@ textarea {
 .main {
   padding-top: 0rem;
   padding-bottom: 2rem;
-  min-height: 800px;
+  min-height: 830px;
 }
 .entry-title {
   color: #fff;
