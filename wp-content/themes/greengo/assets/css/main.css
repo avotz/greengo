@@ -1316,7 +1316,8 @@ textarea {
 .woocommerce-cart .main,
 .woocommerce-checkout .main,
 .post-type-archive-product .main,
-.page-template-page-contact .main {
+.page-template-page-contact .main,
+.page-template-page-about .main {
   height: auto;
 }
 .home .footer,
@@ -1326,8 +1327,43 @@ textarea {
 .woocommerce-cart .footer,
 .woocommerce-checkout .footer,
 .post-type-archive-product .footer,
-.page-template-page-contact .footer {
+.page-template-page-contact .footer,
+.page-template-page-about .footer {
   position: relative;
+}
+.null-instagram-feed {
+  text-align: center;
+  background-color: #fff;
+  color: #3e6520;
+}
+.null-instagram-feed .instagram-pics {
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  -o-box-pack: distribute;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  list-style: none;
+}
+.null-instagram-feed .instagram-pics li {
+  width: 32%;
+}
+.null-instagram-feed .instagram-pics img {
+  padding: 5px;
+  border: 1px solid #eee;
 }
 .footer {
   padding-top: 0.5rem;
