@@ -1318,6 +1318,7 @@ textarea {
 .post-type-archive-product .footer,
 .page-template-page-contact .footer {
   position: relative;
+  height: auto;
 }
 .footer {
   padding-top: 0.5rem;
