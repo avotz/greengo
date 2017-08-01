@@ -13,6 +13,7 @@ fusia = #FF3EAA
 gris = #777777
 gris2 = #a1a0a0
 naranja = #FD6100
+rojo = #EF2D25
 
 *
 	box-sizing border-box
@@ -931,14 +932,27 @@ textarea
 	a 
 		color white
 		&:hover
-			color: verde
+			color: rgba(0,0,0,.45)//verde
 		
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active
-	background-color verde
+	background-color azul !important
 	a 
 		&:hover
 			color: white
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.details_tab{
+	background-color naranja 
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.gallery_tab{
+	background-color celeste 
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.book_tab{
+	background-color rojo 
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.rates_tab{
+	background-color verde 
+}
 
 .details_tab a::before {
 	content: '\f00b' !important;

@@ -123,13 +123,18 @@ add_filter( 'woocommerce_product_tabs', 'woo_book_tab' );
 function woo_book_tab( $tabs ) {
   
   // Adds the new tab
-  
+   if ( is_product() && has_term( 'Tour', 'product_cat' ) ) {
+    $nameTab = __( 'Book Now', 'woocommerce' );
+   }else{
+     $nameTab = __( 'Availability', 'woocommerce' );
+   }
+   
   $tabs['book'] = array(
-    'title'   => __( 'Book Now', 'woocommerce' ),
+    'title'   => $nameTab,
     'priority'  => 70,
     'callback'  => 'woo_book_tab_content'
   );
-
+ 
   return $tabs;
 
 }
@@ -149,12 +154,14 @@ add_filter( 'woocommerce_product_tabs', 'woo_rates_tab' );
 function woo_rates_tab( $tabs ) {
   
   // Adds the new tab
+ if ( is_product() && has_term( 'Tour', 'product_cat' ) ) {
+      $tabs['rates'] = array(
+      'title'   => __( 'Rates', 'woocommerce' ),
+      'priority'  => 50,
+      'callback'  => 'woo_rates_tab_content'
+    );
+}
   
-  $tabs['rates'] = array(
-    'title'   => __( 'Rates', 'woocommerce' ),
-    'priority'  => 50,
-    'callback'  => 'woo_rates_tab_content'
-  );
 
   return $tabs;
 

@@ -1765,13 +1765,25 @@ textarea {
   color: #fff;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-  color: #92bf4f;
+  color: rgba(0,0,0,0.45);
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-  background-color: #92bf4f;
+  background-color: #0a3681 !important;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a:hover {
   color: #fff;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.details_tab {
+  background-color: #fd6100;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.gallery_tab {
+  background-color: #25a1e7;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.book_tab {
+  background-color: #ef2d25;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.rates_tab {
+  background-color: #92bf4f;
 }
 .details_tab a::before {
   content: '\f00b' !important;
