@@ -1309,6 +1309,16 @@ textarea {
     width: 48%;
   }
 }
+.home .main,
+.page-template-page-tours .main,
+.page-template-page-accommodations .main,
+.page-template-page-airtransport .main,
+.woocommerce-cart .main,
+.woocommerce-checkout .main,
+.post-type-archive-product .main,
+.page-template-page-contact .main {
+  height: auto;
+}
 .home .footer,
 .page-template-page-tours .footer,
 .page-template-page-accommodations .footer,
@@ -1318,7 +1328,6 @@ textarea {
 .post-type-archive-product .footer,
 .page-template-page-contact .footer {
   position: relative;
-  height: auto;
 }
 .footer {
   padding-top: 0.5rem;
