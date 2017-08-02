@@ -1309,28 +1309,19 @@ textarea {
     width: 48%;
   }
 }
-.home .main,
-.page-template-page-tours .main,
-.page-template-page-accommodations .main,
-.page-template-page-airtransport .main,
-.woocommerce-cart .main,
-.woocommerce-checkout .main,
-.post-type-archive-product .main,
-.page-template-page-contact .main,
-.page-template-page-about .main {
-  height: auto;
-}
-.home .footer,
-.page-template-page-tours .footer,
-.page-template-page-accommodations .footer,
-.page-template-page-airtransport .footer,
-.woocommerce-cart .footer,
-.woocommerce-checkout .footer,
-.post-type-archive-product .footer,
-.page-template-page-contact .footer,
-.page-template-page-about .footer {
-  position: relative;
-}
+/*.home		
+.page-template-page-tours
+.page-template-page-accommodations
+.page-template-page-airtransport
+.woocommerce-cart
+.woocommerce-checkout
+.post-type-archive-product
+.page-template-page-contact
+.page-template-page-about
+	.main
+		height: auto
+	.footer
+		position relative*/
 .null-instagram-feed {
   text-align: center;
   background-color: #fff;
@@ -1470,8 +1461,8 @@ textarea {
 .main {
   padding-top: 0rem;
   padding-bottom: 2rem;
-  min-height: 700px;
-  height: 90vh;
+  margin-bottom: 2rem;
+  min-height: 648px;
 }
 .entry-title {
   color: #fff;
@@ -1792,7 +1783,7 @@ textarea {
 		padding 1rem*/
 }
 .woocommerce div.product .woocommerce-tabs .panel {
-  padding: 1rem;
+  padding: 0rem 1rem 1rem;
 }
 .woocommerce div.product .woocommerce-tabs .panel ul {
   margin-left: 15px;

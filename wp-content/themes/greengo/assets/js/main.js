@@ -209,6 +209,11 @@
           //$('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
         });
       });
+
+      
+
+     
+
       resizes();
 
     });
@@ -216,21 +221,37 @@
     
 
     $(window).resize(resizes);
+    //$(window).scroll(resizes);
 
     function resizes()
      {
       
       
-        if(getWindowWidth() > 1350)
-            $('.intro__video video').height('auto').width($("body").width() + 90);
-          else
-            $('.intro__video video').height($("body").height() + 90).width('auto');
-        
-         
-        // if(getWindowHeight() > 700)
-        //    $('.main').height('auto');
-        // else 
-        //    $('.main').height(getWindowHeight()-217);
+       var footerHeight = 0,
+           footerTop = 0,
+           $footer = $(".footer");
+           
+       positionFooter();
+       
+       function positionFooter() {
+       
+                footerHeight = $footer.height()+16;
+                footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
+       
+               if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+                   $footer.css({
+                        position: "absolute"
+                    })
+                //    }).animate({
+                //         top: footerTop
+                //    })
+               } else {
+                   $footer.css({
+                        position: "relative"
+                   })
+               }
+               
+       }
 
      }
 
