@@ -123,7 +123,7 @@ get_header(); ?>
 		  	  		</div>
 		  	  		<a href="<?php echo esc_url( home_url( '/luxury-accommodation' ) ); ?>" class="services-item-link"></a>
 		  	  	</div>
-		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/airtransportation.jpg');">
+		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/air-transportation.jpg');">
 		  	  		<div class="services-item-info">
 		  	  			<h3>Air Transportation</h3>
 		  	  			<p>Air Charter Service</p>
