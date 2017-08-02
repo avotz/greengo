@@ -1365,6 +1365,11 @@ textarea {
   padding: 5px;
   border: 1px solid #eee;
 }
+.about-page,
+.contact-page,
+.fishing-page {
+  margin-top: 1.5rem;
+}
 .footer {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
