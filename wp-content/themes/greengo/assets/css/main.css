@@ -1326,6 +1326,15 @@ textarea {
   text-align: center;
   background-color: #fff;
   color: #3e6520;
+  padding-bottom: 0.2rem;
+}
+.null-instagram-feed .widgettitle {
+  background-image: url("./img/instagram-title.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -99999px;
+  padding: 0.8rem;
+  margin-bottom: 0;
 }
 .null-instagram-feed .instagram-pics {
   margin: 0;
@@ -1355,6 +1364,28 @@ textarea {
 .null-instagram-feed .instagram-pics img {
   padding: 5px;
   border: 1px solid #eee;
+}
+.null-instagram-feed a[rel="me"] {
+  -webkit-appearance: none;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  outline: none;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  background: 0 0;
+  border-color: #dbdbdb;
+  color: #262626;
+  padding: 3px 8px;
+}
+.null-instagram-feed .clear {
+  margin-top: 0;
 }
 .about-page,
 .contact-page,
