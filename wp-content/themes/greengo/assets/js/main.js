@@ -213,6 +213,8 @@
 
     });
 
+    
+
     $(window).resize(resizes);
 
     function resizes()
@@ -223,11 +225,12 @@
             $('.intro__video video').height('auto').width($("body").width() + 90);
           else
             $('.intro__video video').height($("body").height() + 90).width('auto');
-
-        if(getWindowHeight() > 700)
-           $('.main').height(getWindowHeight()-217);
-        else 
-           $('.main').height('auto');
+        
+         
+        // if(getWindowHeight() > 700)
+        //    $('.main').height('auto');
+        // else 
+        //    $('.main').height(getWindowHeight()-217);
 
      }
 
