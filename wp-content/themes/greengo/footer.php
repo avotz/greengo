@@ -15,9 +15,9 @@
 		<div class="inner">
 			<div class="footer-container">
 				<div class="footer-social">
-					<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-					<a href="#" class="tripadvisor"><img src="<?php echo get_template_directory_uri();  ?>/img/tripadvisor.png" alt="Pani Amor"></a>
-					<a href="#" class="instagram"><img src="<?php echo get_template_directory_uri();  ?>/img/instagram.png" alt="Pani Amor"></a>
+					<a href="https://www.facebook.com/greengocostarica/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="http://www.tripadvisor.com/Attraction_Review-d12172249" class="tripadvisor" target="_blank"><img src="<?php echo get_template_directory_uri();  ?>/img/tripadvisor.png" alt="Pani Amor"></a>
+					<a href="https://www.instagram.com/greengocostarica/" class="instagram" target="_blank"><img src="<?php echo get_template_directory_uri();  ?>/img/instagram.png" alt="Pani Amor"></a>
 				</div>
 				<div class="footer-partners">
 					<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/img/codigodeconducta.png" alt="Codigo de conducta"></a>

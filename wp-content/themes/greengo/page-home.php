@@ -116,14 +116,14 @@ get_header(); ?>
 
 			  <h2>Concierge Services</h2>
 		  	  <div class="services-container">
-		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/accommodations.jpg');">
+		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/luxury-accommodations.jpg');">
 		  	  		<div class="services-item-info">
 		  	  			<h3>Luxury Accommodation</h3>
 		  	  			<p>Luxury Rentals</p>
 		  	  		</div>
 		  	  		<a href="<?php echo esc_url( home_url( '/luxury-accommodation' ) ); ?>" class="services-item-link"></a>
 		  	  	</div>
-		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/air-transportation.jpg');">
+		  	  	<div class="services-item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/airtransportation.jpg');">
 		  	  		<div class="services-item-info">
 		  	  			<h3>Air Transportation</h3>
 		  	  			<p>Air Charter Service</p>
