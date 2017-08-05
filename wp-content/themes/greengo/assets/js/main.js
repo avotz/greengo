@@ -418,7 +418,7 @@ $('.fishing-popup-link').magnificPopup({
                 url: '/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=tour&count=-1',//'/api/get_posts/?post_type=product&count=-1',
                 
                 success: function(data){
-                    console.log(data)
+                   
 
                     var items = [];
 
@@ -466,7 +466,7 @@ $('.fishing-popup-link').magnificPopup({
                 url: '/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=luxury-accommodation&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
                 
                 success: function(data){
-                    console.log(data)
+                  
 
                     var items = [];
 
