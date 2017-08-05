@@ -201,7 +201,9 @@
     
     $('.intro__video').css('opacity', '0');
     $(window).load(function() {
-     
+       
+
+       
       
       $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
         $('.preloader').hide();
@@ -210,22 +212,37 @@
         });
       });
 
-      
+      var $w = $(window),
+      $background = $('.banner.banner-page .item');
+
+        // Fix background image jump on mobile
+        if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+            $background.css({'top': 'auto', 'bottom': 0});
+
+            $w.resize(sizeBackground);
+            sizeBackground();
+        }
+
+        function sizeBackground() {
+            $background.height(screen.height);
+        }
 
      
 
       resizes();
 
     });
+   
 
-    
 
+
+   
     $(window).resize(resizes);
     //$(window).scroll(resizes);
 
     function resizes()
      {
-      
+       
       
        var footerHeight = 0,
            footerTop = 0,

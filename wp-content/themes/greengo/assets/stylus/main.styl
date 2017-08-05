@@ -21,8 +21,18 @@ rojo = #EF2D25
 	&:after
 	&:before
 		box-sizing border-box
-
-
+// fix para que no se mueva el fondo cuando se oculta la barra url de mobile
+// html, body {
+// 	height:100%;
+// }
+// html {
+//     //overflow: hidden;
+// }
+// body {
+//     overflow-y: scroll;
+//     -webkit-overflow-scrolling:touch;
+// }
+///////
 body
 	font-family 'Lato', serif
 	font-size 100%
@@ -319,7 +329,7 @@ textarea
 			top 0
 			left 0
 			right 0
-			height 100%
+			height 100vh
 			&-info
 				top 70%
 	
