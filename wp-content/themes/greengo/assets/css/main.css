@@ -2145,6 +2145,7 @@ textarea {
 .fishing-page .fishing-media,
 .about-page .fishing-media {
   width: 100%;
+  margin-bottom: 1rem;
 }
 .fishing-page .about-info iframe,
 .about-page .about-info iframe,
