@@ -608,7 +608,7 @@ textarea
 	position: relative
 	.instagram-user 
 		position: absolute;
-		bottom 4px
+		bottom 18px
 		left 1rem
 	.instagram-logo 
 		background-color: #fafafa;
@@ -618,14 +618,15 @@ textarea
 		overflow: hidden;
 		position: relative
 		display: inline-block
-		width: 50px
-		height: 50px
+		width: 30px
+		height: 30px
 		vertical-align: middle
 	.instagram-username
 		display: inline-block
 		vertical-align: middle
 		font-weight: 700
-		padding-left: .5rem
+		padding-left: 0
+		font-size: 13px
 
 .null-instagram-feed
 	text-align: center
@@ -664,16 +665,29 @@ textarea
 		white-space: nowrap;
 		width: 100%;
 		background: 0 0;
-		border-color: #dbdbdb;
-		color: #262626;
-		padding: 3px 8px;
+		border-color: #000;
+		color: verde2;
+		padding: 3px 18px;
 	.clear 
 		margin-top: 0
-		text-align: right
-		padding-right: 1rem
+		text-align: left
+		padding-left: 10rem
 	
+@media screen and (min-width: 480px)
+	.instagram-container
 
+		.instagram-user 
+			bottom 4px
 
+		.instagram-logo 
+			width: 50px
+			height: 50px
+
+		.instagram-username
+			font-size: 16px
+	.null-instagram-feed
+		.clear 
+			padding-left: 14rem
 .about-page
 .contact-page
 .fishing-page
