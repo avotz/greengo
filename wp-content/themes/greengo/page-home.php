@@ -17,9 +17,9 @@ get_header(); ?>
 		<a href="mailto:info@greengocostarica.com">info@greengocostarica.com</a>
 	</div>
 	<div class="header-social">
-		<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-		<a href="#" class="tripadvisor"><i class="fa fa-tripadvisor"></i></a>
-		<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+		<a href="https://www.facebook.com/greengocostarica/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a href="http://www.tripadvisor.com/Attraction_Review-d12172249" class="tripadvisor" target="_blank"><i class="fa fa-tripadvisor"></i></a>
+		<a href="https://www.instagram.com/greengocostarica/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
 	</div>
 	<section class="banner">
 		

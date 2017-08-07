@@ -1941,6 +1941,35 @@ textarea {
 .woocommerce div.product .woocommerce-tabs ul.tabs {
   margin: 0 0 1em;
 }
+.woocommerce div.product .related {
+  color: #3e6520;
+}
+.woocommerce div.product .related .add_to_cart_button {
+  display: none !important;
+}
+@media screen and (min-width: 1000px) {
+  .woocommerce div.product .related {
+    color: #fff;
+    max-width: 420px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .woocommerce div.product .related .woocommerce-loop-product__title {
+    font-size: 13px !important;
+  }
+  .woocommerce ul.products li.product,
+  .woocommerce-page ul.products li.product,
+  .woocommerce-page[class*=columns-] ul.products li.product,
+  .woocommerce[class*=columns-] ul.products li.product {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .woocommerce div.product .related {
+    max-width: 500px;
+  }
+}
 .tours {
   margin-top: 70px;
   overflow: hidden;

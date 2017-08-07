@@ -24,7 +24,7 @@ if ( $related_products ) : ?>
 
 	<section class="related products inner">
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+		<h2><?php esc_html_e( 'Other Tours', 'woocommerce' ); ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
 
