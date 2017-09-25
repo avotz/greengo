@@ -1097,27 +1097,65 @@ textarea
 .woocommerce div.product .woocommerce-tabs ul.tabs
 	margin 0 0 1em
 
+.related-panel
+	position: fixed
+	top:0
+	right: -300px
+	bottom: 0
+	background: #FFF
+	z-index: 999
+	max-width: 300px
+	transition: all .3s ease
+	padding-bottom: 1rem
+	&.open
+		right: 0
+.btn-more-tours
+	position: absolute
+	right: 265px
+	top: 50%
+	transform: translate(0, -50%)
+	transform: rotate(270deg);
+	width: 115px
+	text-align: center
+	background-color: rojo
+	border none
+	border-radius: 5px 5px 0 0
+	box-shadow: none
+	text-transform: uppercase
+	font-weight: bold
+	&:hover
+		background-color: rojo
+		color:#FFF
+	
+	span
+		display: block
+		//transform: rotate(270deg);
 .woocommerce div.product
 	.related
 		color verde2
+		overflow-y: scroll
+		height: 100%
+		
 		.add_to_cart_button
 			display: none !important
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product
+	width: 100% //48%
 @media screen and (min-width:1000px)
 	.woocommerce div.product
 		.related
-			color white
-			max-width: 420px
-			position: absolute
+			color verde
+			//max-width: 420px
+			//position: absolute
 			right: 0
 			bottom: 0
 			.woocommerce-loop-product__title 
 				font-size: 13px !important
 	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product
-		width: 48%
+		width: 100% //48%
 @media screen and (min-width:1200px)
 	.woocommerce div.product
 		.related
-			max-width: 500px
+			max-width: 300px
 .tours
 	margin-top 70px
 	overflow hidden

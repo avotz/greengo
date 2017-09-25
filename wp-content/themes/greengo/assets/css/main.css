@@ -1941,17 +1941,72 @@ textarea {
 .woocommerce div.product .woocommerce-tabs ul.tabs {
   margin: 0 0 1em;
 }
+.related-panel {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  bottom: 0;
+  background: #fff;
+  z-index: 999;
+  max-width: 300px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding-bottom: 1rem;
+}
+.related-panel.open {
+  right: 0;
+}
+.btn-more-tours {
+  position: absolute;
+  right: 265px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 115px;
+  text-align: center;
+  background-color: #ef2d25;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn-more-tours:hover {
+  background-color: #ef2d25;
+  color: #fff;
+}
+.btn-more-tours span {
+  display: block;
+}
 .woocommerce div.product .related {
   color: #3e6520;
+  overflow-y: scroll;
+  height: 100%;
 }
 .woocommerce div.product .related .add_to_cart_button {
   display: none !important;
 }
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product,
+.woocommerce-page[class*=columns-] ul.products li.product,
+.woocommerce[class*=columns-] ul.products li.product {
+  width: 100%;
+}
 @media screen and (min-width: 1000px) {
   .woocommerce div.product .related {
-    color: #fff;
-    max-width: 420px;
-    position: absolute;
+    color: #92bf4f;
     right: 0;
     bottom: 0;
   }
@@ -1962,12 +2017,12 @@ textarea {
   .woocommerce-page ul.products li.product,
   .woocommerce-page[class*=columns-] ul.products li.product,
   .woocommerce[class*=columns-] ul.products li.product {
-    width: 48%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .woocommerce div.product .related {
-    max-width: 500px;
+    max-width: 300px;
   }
 }
 .tours {

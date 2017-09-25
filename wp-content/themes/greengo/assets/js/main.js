@@ -72,6 +72,48 @@
           timeout: 200
 
            });
+        
+           $('.related-panel').hoverIntent({
+            over: function() {
+                if(!isMobile.any())
+                  $(this).toggleClass('open');
+                },
+            out:  function() {
+                if(!isMobile.any())
+                  $(this).toggleClass('open');
+                },
+            timeout: 200
+  
+             });
+
+             var isMobile = {
+                Android: function() {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function() {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function() {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function() {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function() {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function() {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
+        
+            $('.related-panel .btn-more-tours').on('click', function(e) {
+                if(!isMobile.any())
+                 e.preventDefault();
+        
+           });
+
+            
       
       $(".date").flatpickr({
       minDate: "today",
@@ -187,6 +229,7 @@
     function isHome(){
       return $('body').hasClass('home');
     }
+    
     $(window).scroll(function () {
 
           if(isHome()){
