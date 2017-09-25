@@ -40,7 +40,7 @@
       layoutMode: 'masonry',
       itemSelector: '.woocommerce-product-gallery__image'
     });*/
-
+   
     $('.woocommerce-product-gallery__image a').magnificPopup({
       type: 'image',
       gallery:{
@@ -405,6 +405,36 @@ $('.fishing-popup-link').magnificPopup({
 
        
     });
+    //temporalmente para no hacer booking //////
+    $('.woocommerce-tabs .book_tab a').attr('href','#tour-popup')
+    $('.woocommerce-tabs .book_tab a').attr('data-title',$('#tab-book a.tour-popup-link').data('title'))
+    $('.woocommerce-tabs .book_tab a').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+
+                this.st.mainClass = 'mfp-zoom-out';
+                $('body').addClass('mfp-open');
+            },
+            beforeClose: function() {
+
+               
+                $('body').removeClass('mfp-open');
+            }
+
+        }
+
+       
+    });
+    $('.woocommerce-tabs .book_tab a').on('click',function (e) {
+      
+        $('#tour-popup').find('select[name="tours[]"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
+
+     });
+     //////////////////////////////////////////////////////////
+
      $('.tour-popup-link').magnificPopup({
         type: 'inline',
         midClick: true,
