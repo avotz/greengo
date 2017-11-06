@@ -68,7 +68,7 @@ get_header(); ?>
                   'post_type' => 'product',
                   //'order' => 'ASC',
                   'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-                  'posts_per_page' => 14,
+                  'posts_per_page' => 15,
                    'paged' => $paged,
                  'tax_query' => array(
                     array(
