@@ -118,19 +118,19 @@ get_header( 'shop' ); ?>
                                     </div>
                                     <div class="entry-excerpt-wrapper">
                                      <div class="entry-excerpt-price">
-                                       <span>From 
+                                       <!-- <span>From 
                                        <?php 
                                       
-                                        $currency = get_woocommerce_currency_symbol();
+                                       /* $currency = get_woocommerce_currency_symbol();
 
-                                       $product = new WC_Product( $post->ID ); 
+                                       $product = new WC_Product( $post->ID ); */
                                      /*echo $product->get_price_html();
                                       
                                      woocommerce_template_loop_price(); */
-                                      echo $currency;
-                                      echo get_post_meta( get_the_ID(), '_wc_booking_cost', true );
+                                      /*echo $currency;
+                                      echo get_post_meta( get_the_ID(), '_wc_booking_cost', true );*/
                                       // echo word_count(get_the_excerpt(), '24'); ?>
-                                      </span>
+                                      </span> -->
                                      </div>
                                      <div>
                                        <a href="<?php the_permalink(); ?>" >
