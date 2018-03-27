@@ -76,7 +76,7 @@ get_header(); ?>
 		  	  		
 		  	  
 	  	  </div>
-	  	   <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner6.jpg');">
+	  	   <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/Rio-Celeste.jpg');">
 	  	  	
 		  	  		
 		  	  		<div class="item-info">
