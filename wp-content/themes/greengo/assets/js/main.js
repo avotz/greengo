@@ -505,7 +505,7 @@ $('.fishing-popup-link').magnificPopup({
         
           $.ajax({
                 type: 'GET',
-                url: '/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=tour&count=-1',//'/api/get_posts/?post_type=product&count=-1',
+                url: '/wp-json/alo/v1/tours',//'/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=tour&count=-1',//'/api/get_posts/?post_type=product&count=-1',
                 
                 success: function(data){
                    
@@ -513,10 +513,10 @@ $('.fishing-popup-link').magnificPopup({
                     var items = [];
 
                 var select = $('select[name="tours[]"]').empty();
-                $.each(data.posts, function(i,item) {
+                $.each(data, function(i,item) {
                   select.append( '<option value="'
-                                       + $.trim(item.slug) + '">'
-                                       + item.title
+                                       + $.trim(item.post_name) + '">'
+                                       + item.post_title
                                        + '</option>' ); 
 
 
@@ -553,7 +553,7 @@ $('.fishing-popup-link').magnificPopup({
         
           $.ajax({
                 type: 'GET',
-                url: '/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=luxury-accommodation&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
+                url: '/wp-json/alo/v1/accommodations',//'/api/taxonomy/get_taxonomy_posts/?taxonomy=product_cat&slug=luxury-accommodation&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
                 
                 success: function(data){
                   
@@ -561,10 +561,10 @@ $('.fishing-popup-link').magnificPopup({
                     var items = [];
 
                 var select = $('select[name="accommodations[]"]').empty();
-                $.each(data.posts, function(i,item) {
+                $.each(data, function(i,item) {
                   select.append( '<option value="'
-                                       + $.trim(item.slug) + '">'
-                                       + item.title
+                                       + $.trim(item.post_name) + '">'
+                                       + item.post_title
                                        + '</option>' ); 
 
 

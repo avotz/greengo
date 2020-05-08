@@ -25,7 +25,7 @@ function get_tours(){
         'post_type' => 'product',
         //'order' => 'ASC',
         'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
-       
+        'posts_per_page' => -1,
        'tax_query' => array(
           array(
             'taxonomy' => 'product_cat',
@@ -37,7 +37,29 @@ function get_tours(){
       );
       $items = new WP_Query( $args );
 
-      return $items;
+      return $items->posts;
+   
+}
+
+function get_accommodations(){
+
+    $args = array(
+        'post_type' => 'product',
+        //'order' => 'ASC',
+        'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+        'posts_per_page' => -1,
+       'tax_query' => array(
+          array(
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => 'luxury-accommodation'
+          )
+        )
+        
+      );
+      $items = new WP_Query( $args );
+
+      return $items->posts;
    
 }
 
@@ -48,6 +70,11 @@ add_action('rest_api_init', function () {
     register_rest_route('alo/v1', '/tours', array(
         'methods' => 'GET',
         'callback' => 'get_tours',
+    ));
+
+    register_rest_route('alo/v1', '/accommodations', array(
+        'methods' => 'GET',
+        'callback' => 'get_accommodations',
     ));
    
 
