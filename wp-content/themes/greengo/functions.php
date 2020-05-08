@@ -183,3 +183,4 @@ require get_template_directory() . '/inc/wc.php';
  * Implement the metabox custom post type.
  */
 require get_template_directory() . '/inc/cpt.php';
+require get_template_directory() . '/inc/custom-api.php';
